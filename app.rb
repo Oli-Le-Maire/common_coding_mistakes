@@ -2,7 +2,12 @@ require 'sinatra/base'
 
 class CommonErrors < Sinatra::Base
 
-  get "/" do
+  get '/' do
+    "What common mistake or error do you often make while coding?"
+
+  end
+
+  get '/common_mistakes' do
 
   end
 
