@@ -1,10 +1,15 @@
 require 'sinatra/base'
+require './lib/mistakes'
 
 class CommonErrors < Sinatra::Base
 
   get '/' do
-    "What common mistake or error do you often make while coding?"
+    erb :index
+  end
 
+  post '/form_action' do
+    data = params[:common_mistakes_form]
+    data
   end
 
   get '/common_mistakes' do

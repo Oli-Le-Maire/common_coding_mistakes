@@ -9,6 +9,7 @@ feature '/common_mistakes contains a list of common mistakes' do
   scenario '/common_mistakes contains a submitted mistake from user input' do
     visit('/')
     fill_in(:common_mistakes_form, with: "making spelling mistakes")
-    expect(page).to have_content('test')
+    click_button('Submit')
+    expect(page).to have_content('making spelling mistakes')
   end
 end
