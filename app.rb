@@ -2,6 +2,10 @@ require 'sinatra/base'
 
 class CommonErrors < Sinatra::Base
 
+  get "/" do
 
-  run! if app_file = $0
+  end
+
+  run! if app_file == $0
+
 end
